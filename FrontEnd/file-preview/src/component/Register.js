@@ -2,7 +2,7 @@ import React from 'react'
 
 const Register = () => {
   return (
-    <section className="vh-100" style={{ backgroundColor: "#eee" }}>
+    <section className="mt-5 shadow-lg" >
   <div className="container h-100">
     <div className="row d-flex justify-content-center align-items-center h-100">
       <div className="col-lg-12 col-xl-11">
@@ -66,20 +66,9 @@ const Register = () => {
                       </label>
                     </div>
                   </div>
-                  <div className="form-check d-flex justify-content-center mb-5">
-                    <input
-                      className="form-check-input me-2"
-                      type="checkbox"
-                      defaultValue=""
-                      id="form2Example3c"
-                    />
-                    <label className="form-check-label" htmlFor="form2Example3">
-                      I agree all statements in{" "}
-                      <a href="#!">Terms of service</a>
-                    </label>
-                  </div>
+                 
                   <div className="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
-                    <button type="button" className="btn btn-primary btn-lg">
+                    <button type="button" className="btn btn-primary btn-lg rounded-circle">
                       Register
                     </button>
                   </div>

@@ -13,11 +13,11 @@ const Login = () => {
           />
           <div className="card mb-3">
             <div className="row g-0 d-flex align-items-center">
-              <div className="col-lg-4 d-none d-lg-flex">
+              <div className="col-lg-4  d-lg-flex">
                 <img
-                  src="https://mdbootstrap.com/img/new/ecommerce/vertical/004.jpg"
-                  alt="Trendy Pants and Shoes"
-                  className="w-100 rounded-t-5 rounded-tr-lg-0 rounded-bl-lg-5"
+                  src="https://img.freepik.com/free-vector/user-verification-unauthorized-access-prevention-private-account-authentication-cyber-security-people-entering-login-password-safety-measures_335657-1592.jpg?w=740&t=st=1660156771~exp=1660157371~hmac=9a13f9fdd61daf4cd2145e8740d5092e933fffc38c4f96f1d315bd5df94c3719"
+                  alt="LOGIN"
+                  className="w-100 rounded-t-5 rounded-tr-lg-0 rounded-bl-lg-5" style={{minHeight:'300px'}}
                 />
               </div>
               <div className="col-lg-8">
@@ -47,22 +47,6 @@ const Login = () => {
 
                     <div className="row mb-4">
                       <div className="col d-flex justify-content-center">
-                        <div className="form-check">
-                          <input
-                            className="form-check-input"
-                            type="checkbox"
-                            defaultValue=""
-                            id="form2Example31"
-                            defaultChecked=""
-                          />
-                          <label
-                            className="form-check-label"
-                            htmlFor="form2Example31"
-                          >
-                            {" "}
-                            Remember me{" "}
-                          </label>
-                        </div>
                       </div>
                       <div className="col">
                         <a href="#!">Forgot password?</a>
@@ -71,7 +55,7 @@ const Login = () => {
 
                     <button
                       type="button"
-                      className="btn btn-primary  mb-4"
+                      className="btn btn-primary  mb-4 rounded-circle"
                     >
                       Sign in
                     </button>

@@ -3,53 +3,44 @@ import { NavLink } from "react-router-dom";
 
 const NavBar = () => {
   return (
-    <nav className="navbar navbar-expand-lg navbar-light bg-light">
-  <div className="container-fluid">
-    <a className="navbar-brand text-light bg-dark rounded-circle" href="#">
-    <i class="fa fa-eye px-4" aria-hidden="true"></i>
+    <nav className="navbar navbar-expand-lg navbar-light bg-light " style={{position:'sticky',top:'0px'}}>
+    <a className="navbar-brand  px-4 rounded-circle mx-2" href="#" style={{background:"#05fc99"}}>
+    <i class="fa fa-eye fa-spin fa-1x fa-fw"></i>
+<span class="sr-only">Loading...</span>
     </a>
     <button
-      className="navbar-toggler bg-dark"
+      className="navbar-toggler"
       type="button"
-      data-bs-toggle="collapse"
-      data-bs-target="#navbarNav"
+      data-toggle="collapse"
+      data-target="#navbarNav"
       aria-controls="navbarNav"
       aria-expanded="false"
       aria-label="Toggle navigation"
-    >
+    ><i class="fa fa-bars" aria-hidden="true"></i>
       <span className="navbar-toggler-icon" />
     </button>
-    <div className="collapse navbar-collapse" id="navbarNav">
+    <div className="collapse navbar-collapse " id="navbarNav">
       <ul className="navbar-nav">
-        <li className="nav-item">
-          <NavLink className="nav-link active" aria-current="page" to="home">
-            Home
+        <li className="nav-item active">
+          <NavLink className="nav-link" to="home">
+            Home <span className="sr-only">(current)</span>
           </NavLink>
         </li>
         <li className="nav-item">
           <NavLink className="nav-link" to="login">
-            Login
+           Login
           </NavLink>
         </li>
         <li className="nav-item">
-          <NavLink className="nav-link" to="register">
-           Register
+          <NavLink className="nav-link" to="Register">
+            Register
           </NavLink>
         </li>
-        <li className="nav-item">
-          <NavLink
-            className="nav-link "
-            to="#"
-            tabIndex={-1}
-            aria-disabled="true"
-          >
-            Disabled
-          </NavLink>
-        </li>
+        
       </ul>
     </div>
-  </div>
-</nav>
+  </nav>
+  
 
   )
 }

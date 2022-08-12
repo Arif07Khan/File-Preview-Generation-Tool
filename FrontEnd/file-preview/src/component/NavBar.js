@@ -4,10 +4,10 @@ import { NavLink } from "react-router-dom";
 const NavBar = () => {
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light " style={{position:'sticky',top:'0px'}}>
-    <a className="navbar-brand  px-4 rounded-circle mx-2" href="#" style={{background:"#05fc99"}}>
+    <NavLink className="navbar-brand  px-4 rounded-circle mx-2" to="home" title="Home"style={{background:"#05fc99"}}>
     <i class="fa fa-eye fa-spin fa-1x fa-fw"></i>
 <span class="sr-only">Loading...</span>
-    </a>
+    </NavLink>
     <button
       className="navbar-toggler"
       type="button"

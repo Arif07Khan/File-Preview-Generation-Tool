@@ -1,0 +1,11 @@
+.nav-item{
+    transition: all .5s ;
+   
+}
+.nav-item:hover{
+    
+    background-color: rgb(246, 91, 91);
+    border-radius: 10px;
+   transform: rotate(-2deg);
+}
+ 

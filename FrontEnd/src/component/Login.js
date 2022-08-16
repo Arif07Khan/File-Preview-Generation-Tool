@@ -1,8 +1,9 @@
 import React from "react";
 
+
 const Login = () => {
   return (
-    <div className="container mt-5">
+    <div className="container mt-5 shadow-lg">
       <>
         <section className=" text-center text-lg-start">
           <style
@@ -47,6 +48,7 @@ const Login = () => {
 
                     <div className="row mb-4">
                       <div className="col d-flex justify-content-center">
+                      
                       </div>
                       <div className="col">
                         <a href="#!">Forgot password?</a>

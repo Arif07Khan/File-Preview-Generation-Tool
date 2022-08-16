@@ -1,10 +1,11 @@
 import React from 'react'
 import { NavLink } from "react-router-dom";
+import './navbar.css'
 
 const NavBar = () => {
   return (
-    <nav className="navbar navbar-expand-lg navbar-light bg-light " style={{position:'sticky',top:'0px'}}>
-    <NavLink className="navbar-brand  px-4 rounded-circle mx-2" to="home" title="Home"style={{background:"#05fc99"}}>
+    <nav className="navbar navbar-expand-lg navbar-light bg-light " style={{position:'sticky',top:'0px',zIndex:'1'}}>
+    <NavLink className="navbar-brand  px-4 rounded-circle mx-2" to="home" title="Home"style={{background:"#808080"}}>
     <i class="fa fa-eye fa-spin fa-1x fa-fw"></i>
 <span class="sr-only">Loading...</span>
     </NavLink>

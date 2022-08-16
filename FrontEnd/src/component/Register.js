@@ -1,9 +1,10 @@
 import React from 'react'
 
+
 const Register = () => {
   return (
-    <section className="mt-5 shadow-lg" >
-  <div className="container h-100">
+    <section className=" container mt-5 shadow-lg" >
+  <div className="h-100">
     <div className="row d-flex justify-content-center align-items-center h-100">
       <div className="col-lg-12 col-xl-11">
         <div className="card text-black" style={{ borderRadius: 25 }}>
@@ -54,19 +55,16 @@ const Register = () => {
                     </div>
                   </div>
                   <div className="d-flex flex-row align-items-center mb-4">
-                    <i className="fas fa-key fa-lg me-3 fa-fw" />
+                    <i class="fa fa-calendar fa-lg me-3 fa-fw" aria-hidden="true"/>
                     <div className="form-outline flex-fill mb-0">
                       <input
-                        type="password"
+                        type="date"
                         id="form3Example4cd"
                         className="form-control"
                       />
-                      <label className="form-label" htmlFor="form3Example4cd">
-                        Repeat your password
-                      </label>
+                      
                     </div>
                   </div>
-                 
                   <div className="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
                     <button type="button" className="btn btn-primary btn-lg rounded-circle">
                       Register

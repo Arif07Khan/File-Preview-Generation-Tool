@@ -8,7 +8,7 @@ app.use(express.json());
 app.use('/user',userRouter);
 
 app.get('/home',(req,res)=>{
-    res.send("Home Page Hai Bhulna mat")
+    res.send("Home Page ")
 })
 
 

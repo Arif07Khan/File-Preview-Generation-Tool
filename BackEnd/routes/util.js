@@ -8,8 +8,8 @@ var FilePreviews = require("filepreviews");
 
 var previews = new FilePreviews({
   debug: true,
-  apiKey: "uYaFvhmxJVWwleStiT2GRQgy9O5yLM",
-  apiSecret: "MuQlJYdJGcimiLRd0LYWxgqAS38QKY",
+  apiKey: "868JiZ55qMojl6fUNmgo0hfIxnurzQ",
+  apiSecret: "K0LE2ij0EtLExNdlcnKgCQatCtcePD",
 })
 
 const genFilePreview = (url, cb) => {

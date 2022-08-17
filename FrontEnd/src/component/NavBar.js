@@ -5,10 +5,7 @@ import './navbar.css'
 const NavBar = () => {
   return (
     <nav className="navbar navbar-expand-lg navbar-light  " style={{position:'sticky',top:'0px',zIndex:'1'}}>
-    <NavLink className="navbar-brand  px-4 rounded-circle mx-2" to="home" title="Home"style={{background:"#808080"}}>
-    <i class="fa fa-eye fa-spin fa-1x fa-fw"></i>
-<span class="sr-only">Loading...</span>
-    </NavLink>
+    
     <button
       className="navbar-toggler"
       type="button"
@@ -24,21 +21,15 @@ const NavBar = () => {
     <div className="collapse navbar-collapse " id="navbarNav">
       <ul className="navbar-nav">
         <li className="nav-item active">
-          <NavLink className="nav-link" to="home">
-            Home <span className="sr-only">(current)</span>
+          <NavLink className="nav-link" to="fileupload">
+            FileUpload <span className="sr-only">(current)</span>
           </NavLink>
         </li>
         <li className="nav-item">
-          <NavLink className="nav-link" to="login">
-           Login
+          <NavLink className="nav-link" to="showfile">
+           ShowFile
           </NavLink>
         </li>
-        <li className="nav-item">
-          <NavLink className="nav-link" to="Register">
-            Register
-          </NavLink>
-        </li>
-        
       </ul>
     </div>
   </nav>

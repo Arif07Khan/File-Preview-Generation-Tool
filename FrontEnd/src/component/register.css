@@ -1,0 +1,6 @@
+.form-input{
+    transition: all .5s ;
+}
+.form-input:hover{
+    background-color: rgba(204, 222, 252, 0.591);
+}

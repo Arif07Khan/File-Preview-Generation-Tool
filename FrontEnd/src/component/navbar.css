@@ -4,8 +4,13 @@
 }
 .nav-item:hover{
     
-    background-color: rgb(246, 91, 91);
+    background-color: rgb(172, 172, 172);
     border-radius: 10px;
    transform: rotate(-2deg);
 }
- 
+.navbar{
+    transition:all .5s 
+}
+.navbar:hover{
+    background-color:rgba(213, 213, 213, 0.863);
+}

@@ -4,7 +4,7 @@ import './navbar.css'
 
 const NavBar = () => {
   return (
-    <nav className="navbar navbar-expand-lg navbar-light bg-light " style={{position:'sticky',top:'0px',zIndex:'1'}}>
+    <nav className="navbar navbar-expand-lg navbar-light  " style={{position:'sticky',top:'0px',zIndex:'1'}}>
     <NavLink className="navbar-brand  px-4 rounded-circle mx-2" to="home" title="Home"style={{background:"#808080"}}>
     <i class="fa fa-eye fa-spin fa-1x fa-fw"></i>
 <span class="sr-only">Loading...</span>
@@ -17,6 +17,7 @@ const NavBar = () => {
       aria-controls="navbarNav"
       aria-expanded="false"
       aria-label="Toggle navigation"
+      
     ><i class="fa fa-bars" aria-hidden="true"></i>
       <span className="navbar-toggler-icon" />
     </button>

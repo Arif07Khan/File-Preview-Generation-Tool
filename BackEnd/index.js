@@ -4,9 +4,12 @@ const port=5000;
 const cors=require('cors')
 
 const userRouter=require('./routes/userRoute');
+const fileutil=require('./routes/util');
 app.use(express.json());
 
 app.use(cors({origin:['http://localhost:3000']}))
+app.use(express.json());
+app.use(cors({origin:['http://localhost:4000']}))
 app.use(express.json());
 app.use('/user',userRouter);
 

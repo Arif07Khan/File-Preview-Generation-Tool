@@ -110,7 +110,7 @@ const generateVidPreview2 = (url) => {
   // upload(req, res, (err) => {
   //    if(err) {
   //     console.log(err);
-  //      res.status(400).send("Something went wrong!");
+  // res.status(400).send("Something went wrong!");
   //    }else{
   //     // generateVidPreview2(req.file.originalname);
   //     // res.json({previewLink : "http://localhost:4000/"+req.file.originalname+"_preview.gif"});

@@ -9,6 +9,7 @@
    transform: rotate(-2deg);
 }
 .navbar{
+    background-color:rgba(182, 236, 252, 0.811);
     transition:all .5s 
 }
 .navbar:hover{

@@ -3,15 +3,15 @@
    
 }
 .nav-item:hover{
-    
-    background-color: rgb(172, 172, 172);
+    background-color: rgb(246, 215, 215);
     border-radius: 10px;
-   transform: rotate(-2deg);
+   transform: scale(1.2);
 }
 .navbar{
-    background-color:rgba(182, 236, 252, 0.811);
+    
+    background-color:rgb(211, 233, 239);
     transition:all .5s 
 }
 .navbar:hover{
-    background-color:rgba(213, 213, 213, 0.863);
+    background-color:rgb(149, 180, 206);
 }

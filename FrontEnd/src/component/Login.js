@@ -1,75 +1,84 @@
-import React from "react";
+import React from 'react'
+import { Formik } from 'formik';
+import Swal from 'sweetalert2'
+import { NavLink } from 'react-router-dom';
+import "./login.css"
 
 
 const Login = () => {
+  const url="http://localhost:5000";
+
+  const userLogin =  async (formdata) => {
+    const response= await fetch(url+ '/user/authenticate',{
+      method:'POST',
+      body:JSON.stringify(formdata),
+      headers:{
+        'Content-Type':'application/json'
+      }
+     })
+     
+     if(response.status===200){
+      Swal.fire({
+        title: 'Do you want to login?',
+        showDenyButton: true,
+        showCancelButton: true,
+        confirmButtonText: 'Login',
+        denyButtonText: `Don't Login`,
+      }).then((result) => {
+        if (result.isConfirmed) {
+          Swal.fire('Login!', '', 'success')
+        } else if (result.isDenied) {
+          Swal.fire('You were not logined', '', 'error')
+        }
+      })
+     }else if(response.status===400){
+      Swal.fire({
+        icon:"error",
+        title:"Error",
+        text:"Email or password is incorrect"
+      })
+     }else{
+      Swal.fire({
+        icon:"error",
+        title:"Error",
+        text:"Something went wrong"
+      })
+     } 
+   }
+
   return (
-    <div className="container mt-5 shadow-lg">
-      <>
-        <section className=" text-center text-lg-start">
-          <style
-            dangerouslySetInnerHTML={{
-              __html:
-                "\n    .rounded-t-5 {\n      border-top-left-radius: 0.5rem;\n      border-top-right-radius: 0.5rem;\n    }\n\n    @media (min-width: 992px) {\n      .rounded-tr-lg-0 {\n        border-top-right-radius: 0;\n      }\n\n      .rounded-bl-lg-5 {\n        border-bottom-left-radius: 0.5rem;\n      }\n    }\n  ",
-            }}
-          />
-          <div className="card mb-3">
-            <div className="row g-0 d-flex align-items-center">
-              <div className="col-lg-4  d-lg-flex">
-                <img
-                  src="https://img.freepik.com/free-vector/user-verification-unauthorized-access-prevention-private-account-authentication-cyber-security-people-entering-login-password-safety-measures_335657-1592.jpg?w=740&t=st=1660156771~exp=1660157371~hmac=9a13f9fdd61daf4cd2145e8740d5092e933fffc38c4f96f1d315bd5df94c3719"
-                  alt="LOGIN"
-                  className="w-100 rounded-t-5 rounded-tr-lg-0 rounded-bl-lg-5" style={{minHeight:'300px'}}
-                />
-              </div>
-              <div className="col-lg-8">
-                <div className="card-body py-5 px-md-5">
-                  <form>
-                    <div className="form-outline mb-4">
-                      <input
-                        type="email"
-                        id="form2Example1"
-                        className="form-control"
-                      />
-                      <label className="form-label" htmlFor="form2Example1">
-                        Email address
-                      </label>
-                    </div>
+    <div className='bd_login'>
+    <div className='container'>
+      <div className='card card_login' >
+      <div className='row m-5'>
+        <div className='col-md-7 '>
+          <div className="bg_image rounded-5">
 
-                    <div className="form-outline mb-4">
-                      <input
-                        type="password"
-                        id="form2Example2"
-                        className="form-control"
-                      />
-                      <label className="form-label" htmlFor="form2Example2">
-                        Password
-                      </label>
-                    </div>
-
-                    <div className="row mb-4">
-                      <div className="col d-flex justify-content-center">
-                      
-                      </div>
-                      <div className="col">
-                        <a href="#!">Forgot password?</a>
-                      </div>
-                    </div>
-
-                    <button
-                      type="button"
-                      className="btn btn-primary  mb-4 rounded-circle"
-                    >
-                      Sign in
-                    </button>
-                  </form>
-                </div>
-              </div>
-            </div>
           </div>
-        </section>
-      </>
-    </div>
-  );
-};
+        </div>
+        <div className='col-md-5'>
+        <h2 className='text-danger'>Login Page</h2>
+        <Formik initialValues={{
+          email:"",
+          password:"",
+        }}onSubmit={userLogin}>
+          {({values,handleSubmit,handleChange})=>(
+           <form onSubmit={handleSubmit}> 
+        <input type="text" className="form-control form_input" value={values.email} onChange={handleChange} id="email" placeholder="Enter Your E-mail"/>
+        <input type="password" className="form-control form_input"value={values.password} onChange={handleChange} id="password" placeholder="Enter Your Password"/>
+        <button type="Submit" className='btn btn-primary form-control bt_form'> Submit </button>
+        <p className='mt-3'>Already Login? &nbsp; <NavLink to="/register" className='lg_link'>SIGN UP</NavLink></p> 
+        
+      </form>
+            )}
 
-export default Login;
+        </Formik>
+        </div>
+      </div>
+      </div>
+    </div>
+  </div>
+  )
+}
+
+export default Login

@@ -41,9 +41,23 @@ router.get('/getByID/:id',(req,res)=>{
     res.json(err);
    });
 });
-router.get('/authenticate',(req,res)=>{
-   res.send("Authenticating users");
-});
+
+   router.post("/authenticate",(req,res)=>{
+      const formdata=req.body;
+      Model.findOne({email:formdata.email,password:formdata.password})
+      .then((result) => {
+          if(result){
+              res.status(200).json({message:"Successfully Login"});
+          }else{
+              res.status(400).json({message:"Invalid password or Email"})
+          }
+      }).catch((err) => {
+          res.status(500).json(err);
+      });
+  
+  });
+  
+
 router.get('/show',(req,res)=>{
 
     Model.find({}).then((result) => {

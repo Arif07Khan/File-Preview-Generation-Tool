@@ -19,7 +19,7 @@ const genFilePreview = (url, cb) => {
     // console.log(err)
     // console.log(result.id)
     // console.log(result.status)
-    // return result.id;
+    return result.id;
     cb(result.id)
   })
 }
@@ -108,15 +108,15 @@ const generateVidPreview2 = (url) => {
   const formdata = req.body;  
   const id = generateVidPreview2(formdata.url);
   res.json({previewid : id});
-  // upload(req, res, (err) => {
-  //    if(err) {
-  //     console.log(err);
-  // res.status(400).send("Something went wrong!");
-  //    }else{
-  //     // generateVidPreview2(req.file.originalname);
-  //     // res.json({previewLink : "http://localhost:4000/"+req.file.originalname+"_preview.gif"});
-  //    }
-  //  });
+  upload(req, res, (err) => {
+     if(err) {
+      console.log(err);
+  res.status(400).send("Something went wrong!");
+     }else{
+      // generateVidPreview2(req.file.originalname);
+      // res.json({previewLink : "http://localhost:4000/"+req.file.originalname+"_preview.gif"});
+     }
+   });
  })
 
  router.post("/gen-doc-preview", (req, res) => {

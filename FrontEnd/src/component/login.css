@@ -1,0 +1,25 @@
+*{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.card_login{
+    margin-top: 3.3rem;
+    
+}
+.bg_image{
+    border-radius: 5px;
+    background-image: url(https://fusionauth.io/assets/img/advice/types-of-logins-article.png);
+    min-height: 300px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+}
+.form_input{
+    display: block;
+    margin-top: 1rem;
+    
+}
+.bt_form{
+    border-radius: 50px;
+    margin-top: 2rem;
+}

@@ -7,7 +7,9 @@ const userRouter=require('./routes/userRoute');
 const fileutil=require('./routes/util');
 app.use(express.json());
 
-app.use(cors({origin:['http://localhost:3000']}))
+app.use(cors({origin:['http://localhost:3001']}))
+app.use(express.json());
+app.use(cors({origin:['https://demofrontend01.herokuapp.com','http://localhost:3000']}))
 app.use(express.json());
 app.use('/user',userRouter);
 

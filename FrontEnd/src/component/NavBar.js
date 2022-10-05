@@ -1,13 +1,14 @@
 import React from 'react'
 import { NavLink } from "react-router-dom";
 import './navbar.css'
+import photo from "./photo/photo.png"
 
 const NavBar = () => {
   return (
-    <nav className="navbar navbar-expand-lg navbar-light  " style={{position:'sticky',top:'0px',zIndex:'1'}}>
-    <NavLink className="navbar-brand  px-4 rounded-circle mx-2" to="home" title="Home"style={{background:"#808080"}}>
-    <i class="fa fa-eye fa-spin fa-1x fa-fw"></i>
-<span class="sr-only">Loading...</span>
+    <nav className="navbar navbar-expand-lg navbar-light " style={{position:'sticky',top:'0px',zIndex:'1'}}>
+    <NavLink className="navbar-brand px-3 mx-2 rounded-circle" to="home" title="Home" style={{backgroundColor:"rgb(169, 180, 183)"}}>
+    <img src={photo}  width={50} 
+      height={50}/>
     </NavLink>
     <button
       className="navbar-toggler"
@@ -37,8 +38,7 @@ const NavBar = () => {
           <NavLink className="nav-link" to="Register">
             Register
           </NavLink>
-        </li>
-        
+        </li>  
       </ul>
     </div>
   </nav>
